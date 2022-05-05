@@ -1,4 +1,5 @@
-import React, { useState, useeffect } from "react";
+import React from "react";
+import { BrowserRouter, Link } from "react-router-dom";
 import "./login.css";
 
 const login = () => {
@@ -7,8 +8,8 @@ const login = () => {
       <div>
         <div className="form">
           <div className="head">
-            <p className="title">L.M.S - Sign in</p>
-            <p className="sub_title">Please fill the form</p>
+            <p className="title">Believers Perception Analytics System</p>
+            <p className="sub_title">Please fill the form to Login</p>
           </div>
           <form>
             <ul>
