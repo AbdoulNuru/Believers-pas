@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Link } from "react-router-dom";
 import "./login.css";
 
-const login = () => {
+const Login = () => {
   return (
     <>
       <div>
@@ -53,7 +53,7 @@ const login = () => {
               </li>
               <div className="action">
                 <BrowserRouter>
-                  <Link to="/signup" className="link">
+                  <Link to="/register" className="link">
                     Have no account??
                   </Link>
                 </BrowserRouter>
@@ -72,4 +72,4 @@ const login = () => {
   );
 };
 
-export default login;
+export default Login;
