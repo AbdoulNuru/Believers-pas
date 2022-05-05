@@ -10,8 +10,6 @@ ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  outline: none;
 }
 
 .form {
@@ -30,10 +28,10 @@ ul {
   font-family: Helvetica Neue;
   font-style: normal;
   font-weight: normal;
-  font-size: 34px;
+  font-size: 36px;
   line-height: 34px;
   color: #2c3e50;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .sub_title {
   font-family: Helvetica Neue;
@@ -45,6 +43,19 @@ ul {
   text-align: center;
   letter-spacing: 1.25px;
   color: #5b5a5a;
+  margin-bottom: 20px;
+}
+
+.sub_title2 {
+  font-family: Helvetica Neue;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 24px;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 1.25px;
+  color: #912c2a;
   margin-bottom: 20px;
 }
 
@@ -94,7 +105,7 @@ ul {
   color: #b9b9b9;
   font-size: 14px;
   overflow: hidden;
-  color: red;
+  color: #912c2a;
 }
 
 .one {
@@ -110,7 +121,7 @@ ul {
 .two {
   position: absolute;
   width: 215px;
-  height: 173px;
+  height: 143px;
   left: -29px;
   top: 740px;
 
@@ -120,7 +131,7 @@ ul {
 .three {
   position: absolute;
   left: 62px;
-  top: 710px;
+  top: 741px;
 
   border-left: 124px solid transparent;
   border-right: 124px solid transparent;
@@ -146,7 +157,6 @@ ul {
   color: #0275d8;
 }
 .button {
-  cursor: pointer;
   width: 87px;
   height: 38px;
   background: #02b1d8;
