@@ -12,19 +12,19 @@ ul {
   margin: 0;
 }
 
-.form {
+.form1 {
   width: 469px;
   height: auto;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 23vh;
+  margin-top: 5vh;
 }
-.head {
+.head1 {
   width: 100%;
   height: auto;
   text-align: center;
 }
-.title {
+.title1 {
   font-family: Helvetica Neue;
   font-style: normal;
   font-weight: normal;
@@ -33,7 +33,7 @@ ul {
   color: #2c3e50;
   margin-bottom: 10px;
 }
-.sub_title {
+.sub_title1 {
   font-family: Helvetica Neue;
   font-style: normal;
   font-weight: normal;
@@ -46,7 +46,7 @@ ul {
   margin-bottom: 20px;
 }
 
-.sub_title2 {
+.sub_title21 {
   font-family: Helvetica Neue;
   font-style: normal;
   font-weight: normal;
@@ -59,13 +59,13 @@ ul {
   margin-bottom: 20px;
 }
 
-.input_wrap {
+.input_wrap1 {
   height: auto;
   width: 100%;
   float: left;
   margin-top: 30px;
 }
-.label {
+.label1 {
   float: left;
   margin-top: -25px;
   height: 18px;
@@ -73,7 +73,7 @@ ul {
   font-size: 14px;
   overflow: hidden;
 }
-.input_dev {
+.input_dev1 {
   float: left;
   height: auto;
   width: 100%;
@@ -82,7 +82,7 @@ ul {
   margin-bottom: 30px;
   border-radius: 3px;
 }
-.input {
+.input1 {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -96,7 +96,7 @@ ul {
   padding: 0;
 }
 
-.message {
+.message1 {
   float: left;
   margin-top: -30px;
   background: #ffffff;
@@ -108,7 +108,7 @@ ul {
   color: #912c2a;
 }
 
-.one {
+.one1 {
   position: absolute;
   width: 237px;
   height: 245px;
@@ -118,7 +118,7 @@ ul {
   background: rgba(2, 177, 216, 0.8);
   mix-blend-mode: normal;
 }
-.two {
+.two1 {
   position: absolute;
   width: 215px;
   height: 173px;
@@ -128,7 +128,7 @@ ul {
   background: rgba(2, 216, 148, 0.8);
 }
 
-.three {
+.three1 {
   position: absolute;
   left: 62px;
   top: 710px;
@@ -138,14 +138,14 @@ ul {
   border-bottom: 139px solid rgba(148, 2, 216, 0.8);
   mix-blend-mode: darken;
 }
-.action {
+.action1 {
   height: auto;
   width: 100%;
   margin-top: 10px;
   float: left;
   display: flex;
 }
-.link {
+.link1 {
   text-decoration: none;
   font-family: Helvetica Neue;
   font-style: normal;
@@ -156,7 +156,7 @@ ul {
 
   color: #0275d8;
 }
-.button {
+.button1 {
   width: 87px;
   height: 38px;
   background: #02b1d8;
@@ -172,6 +172,6 @@ ul {
   color: #ffffff;
   margin-left: auto;
 }
-.error {
+.error1 {
   border: 1px solid #0275d8;
 }
