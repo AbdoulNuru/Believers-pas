@@ -46,6 +46,40 @@ const Register = () => {
                 {/* {<p className={style.message}>{errors.fullName}</p>} */}
               </li>
               <li className="input_wrap1">
+                <label htmlFor="gender" className="label1">
+                  Gender
+                </label>
+                <div className="input_dev1">
+                  <select
+                    name="gender"
+                    id="gender"
+                    className="input1"
+                    // value={data.fullName}
+                    // onChange={this.onChange}
+                  >
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                  </select>
+                </div>
+                {/* {<p className={style.message}>{errors.fullName}</p>} */}
+              </li>
+              <li className="input_wrap1">
+                <label htmlFor="dob" className="label1">
+                  Date of Birth
+                </label>
+                <div className="input_dev1">
+                  <input
+                    type="date"
+                    id="dob"
+                    className="input1"
+                    name="dob"
+                    // min="2018-01-01"
+                    // max="2018-12-31"
+                  />
+                </div>
+                {/* {<p className={style.message}>{errors.fullName}</p>} */}
+              </li>
+              <li className="input_wrap1">
                 <label htmlFor="email" className="label1">
                   Email
                 </label>
@@ -69,22 +103,6 @@ const Register = () => {
                   <input
                     type="password"
                     placeholder="secured password"
-                    name="password"
-                    className="input1"
-                    // value={data.password}
-                    // onChange={this.onChange}
-                  />
-                </div>
-                {/* {<p className={style.message}>{errors.password}</p>} */}
-              </li>
-              <li className="input_wrap1">
-                <label htmlFor="password" className="label1">
-                  Confirm Password
-                </label>
-                <div className="input_dev1">
-                  <input
-                    type="password"
-                    placeholder="re-enter your password"
                     name="password"
                     className="input1"
                     // value={data.password}
