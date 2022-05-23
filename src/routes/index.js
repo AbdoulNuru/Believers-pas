@@ -5,6 +5,7 @@ import DashboardRoot from "../pages/views";
 import Login from "../pages/login/login";
 import Register from "../pages/register/register";
 import Home from "../components/home";
+import AddChurch from "../pages/Add church/newChurch";
 
 axios.defaults.baseURL = "http://localhost:3600";
 
@@ -20,6 +21,7 @@ export default class index extends Component {
             component={({ match }) => (
               <div>
                 <Route path="/home" exact component={Home} />
+                <Route path="/add-church" exact component={AddChurch} />
               </div>
             )}
           />
