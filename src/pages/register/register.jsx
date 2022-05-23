@@ -1,7 +1,30 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import "./register.css";
 
 const Register = () => {
+  const [fname, setFname] = useState("");
+  const [lname, setLname] = useState("");
+  const [gender, setGender] = useState("");
+  const [dob, setDob] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const onSubmit = async (e) => {
+    e.preventDefault();
+
+    const res = await axios.post("/users/churchLeaders", {
+      fname,
+      lname,
+      gender,
+      dob,
+      email,
+      password,
+    });
+
+    console.log("Test", res);
+  };
+
   return (
     <>
       <div>
@@ -21,10 +44,10 @@ const Register = () => {
                   <input
                     type="text"
                     placeholder="enter your first name"
-                    name="firstName"
+                    name="fname"
                     className="input1"
                     // value={data.fullName}
-                    // onChange={this.onChange}
+                    onChange={(e) => setFname(e.target.value)}
                   />
                 </div>
                 {/* {<p className={style.message}>{errors.fullName}</p>} */}
@@ -37,10 +60,10 @@ const Register = () => {
                   <input
                     type="text"
                     placeholder="enter your last name"
-                    name="lastName"
+                    name="lname"
                     className="input1"
                     // value={data.fullName}
-                    // onChange={this.onChange}
+                    onChange={(e) => setLname(e.target.value)}
                   />
                 </div>
                 {/* {<p className={style.message}>{errors.fullName}</p>} */}
@@ -55,10 +78,10 @@ const Register = () => {
                     id="gender"
                     className="input1"
                     // value={data.fullName}
-                    // onChange={this.onChange}
+                    onChange={(e) => setGender(e.target.value)}
                   >
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
+                    <option value="MALE">Male</option>
+                    <option value="FEMALE">Female</option>
                   </select>
                 </div>
                 {/* {<p className={style.message}>{errors.fullName}</p>} */}
@@ -75,6 +98,7 @@ const Register = () => {
                     name="dob"
                     // min="2018-01-01"
                     // max="2018-12-31"
+                    onChange={(e) => setDob(e.target.value)}
                   />
                 </div>
                 {/* {<p className={style.message}>{errors.fullName}</p>} */}
@@ -90,7 +114,7 @@ const Register = () => {
                     name="email"
                     className="input1"
                     // value={data.email}
-                    // onChange={this.onChange}
+                    onChange={(e) => setEmail(e.target.value)}
                   />
                 </div>
                 {/* {<p className={style.message}>{errors.email}</p>} */}
@@ -106,13 +130,15 @@ const Register = () => {
                     name="password"
                     className="input1"
                     // value={data.password}
-                    // onChange={this.onChange}
+                    onChange={(e) => setPassword(e.target.value)}
                   />
                 </div>
                 {/* {<p className={style.message}>{errors.password}</p>} */}
               </li>
               <div className="action1">
-                <button className="button1">sign up</button>
+                <button className="button1" onClick={(e) => onSubmit(e)}>
+                  sign up
+                </button>
               </div>
             </ul>
           </form>
