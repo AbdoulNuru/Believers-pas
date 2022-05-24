@@ -8,6 +8,7 @@ import Home from "../components/home";
 import AddChurch from "../pages/add church/newChurch";
 import AddChurchLeader from "../pages/add leader/newChurchLeader";
 import AddChurchAdmin from "../pages/add admin/newChurchAdmin";
+import ViewUsers from "../pages/tableViews/adminUserView";
 
 axios.defaults.baseURL = "http://localhost:3600";
 
@@ -34,6 +35,7 @@ export default class index extends Component {
                   exact
                   component={AddChurchAdmin}
                 />
+                <Route path="/view-users" exact component={ViewUsers} />
               </div>
             )}
           />
