@@ -10,8 +10,9 @@ import { withRouter } from "react-router-dom";
 import {
   Home,
   //   CloudSnow,
-  //   Plus,
-  //   Users,
+  Plus,
+  Users,
+  UserPlus,
   //   MessageSquare,
   //   DollarSign,
 } from "react-feather";
@@ -99,10 +100,28 @@ const useStyles = makeStyles((theme) => ({
 const DrawerComponents = ({ history, ...props }) => {
   let routes = [
     {
-      key: "home",
-      text: "Home",
-      to: "/home",
-      icon: <Home style={{ color: "#02B1D8" }} />,
+      key: "new church",
+      text: "New Church",
+      to: "/add-church",
+      icon: <Plus style={{ color: "#02B1D8" }} />,
+    },
+    {
+      key: "church leader",
+      text: "New Church Leader",
+      to: "/add-church-leader",
+      icon: <UserPlus style={{ color: "#02B1D8" }} />,
+    },
+    {
+      key: "church admin",
+      text: "New Church Admin",
+      to: "/add-church-admin",
+      icon: <UserPlus style={{ color: "#02B1D8" }} />,
+    },
+    {
+      key: "view users",
+      text: "View Users",
+      to: "/view-users",
+      icon: <Users style={{ color: "#02B1D8" }} />,
     },
   ];
   //   const user = JSON.parse(localStorage.getItem("ag-user-data"));
