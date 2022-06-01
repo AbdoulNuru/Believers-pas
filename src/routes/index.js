@@ -5,7 +5,7 @@ import DashboardRoot from "../pages/views";
 import Login from "../pages/login/login";
 import Register from "../pages/register/register";
 import Home from "../components/home";
-import AddChurch from "../pages/add church/newChurch";
+import AddChurch from "../pages/Add church/newChurch";
 import AddChurchLeader from "../pages/add leader/newChurchLeader";
 import AddChurchAdmin from "../pages/add admin/newChurchAdmin";
 import ViewUsers from "../pages/tableViews/adminUserView";
