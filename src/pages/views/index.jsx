@@ -1,23 +1,25 @@
 import React, { Component } from "react";
+import { withRouter } from "react-router-dom";
+import jwt from "jsonwebtoken";
 import ResponsiveDrawer from "../../components/drawer/responsiveDrawer";
-// import { decode } from "../../utils/jwtToken";
 
 class Index extends Component {
-  //   componentDidMount() {
-  //     const token = localStorage.getItem("token");
-  //     const user = localStorage.getItem("ag-user-data");
+  componentDidMount() {
+    const token = localStorage.getItem("token");
+    //const user = localStorage.getItem("ag-user-data");
 
-  //     if (token) {
-  //       const { exp, email } = decode(token);
-  //       console.log(email);
-  //       if (Date.now() >= exp * 1000) {
-  //         return this.props.history.push("/");
-  //       }
-  //       this.props.loginUserSuccess({ data: JSON.parse(user), token: token });
-  //     } else {
-  //       return this.props.history.push("/");
-  //     }
-  //   }
+    if (token) {
+      const { exp } = jwt.decode(token);
+
+      if (Date.now() >= exp * 1000) {
+        return this.props.history.push("/");
+      }
+      //this.props.loginUserSuccess({ data: JSON.parse(user), token: token });
+      return this.props.history.push("/home");
+    } else {
+      return this.props.history.push("/");
+    }
+  }
   render() {
     return (
       <div>
@@ -27,4 +29,4 @@ class Index extends Component {
   }
 }
 
-export default Index;
+export default withRouter(Index);
