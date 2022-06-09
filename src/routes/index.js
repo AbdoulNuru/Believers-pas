@@ -17,7 +17,7 @@ export default class index extends Component {
     return (
       <Switch>
         <Route path="/" exact component={Login} />
-        <Route path="/register" component={Register} />
+        <Route path="/register" exact component={Register} />
 
         <DashboardRoot>
           <Route

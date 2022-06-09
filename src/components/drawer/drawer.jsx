@@ -6,7 +6,6 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import { makeStyles, fade } from "@material-ui/core/styles";
-import { withRouter } from "react-router-dom";
 import {
   Home,
   //   CloudSnow,
@@ -98,123 +97,51 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const DrawerComponents = ({ history, ...props }) => {
-  let routes = [
-    {
-      key: "new church",
-      text: "New Church",
-      to: "/add-church",
-      icon: <Plus style={{ color: "#02B1D8" }} />,
-    },
-    {
-      key: "church leader",
-      text: "New Church Leader",
-      to: "/add-church-leader",
-      icon: <UserPlus style={{ color: "#02B1D8" }} />,
-    },
-    {
-      key: "church admin",
-      text: "New Church Admin",
-      to: "/add-church-admin",
-      icon: <UserPlus style={{ color: "#02B1D8" }} />,
-    },
-    {
-      key: "view users",
-      text: "View Users",
-      to: "/view-users",
-      icon: <Users style={{ color: "#02B1D8" }} />,
-    },
-  ];
-  //   const user = JSON.parse(localStorage.getItem("ag-user-data"));
+  let routes = [];
 
-  //   if (user) {
-  //     if (user.role === "investor") {
-  //       routes = [
-  //         ...routes,
-  //         {
-  //           key: "home",
-  //           text: translate("home"),
-  //           to: "/investor-home",
-  //           icon: <Home style={{ color: "#80B500" }} />,
-  //         },
-  //         {
-  //           key: "farms",
-  //           text: translate("farms"),
-  //           to: "/farms",
-  //           icon: <CloudSnow style={{ color: "#80B500" }} />,
-  //         },
-  //         {
-  //           key: "chat",
-  //           text: translate("chat"),
-  //           to: "/chat",
-  //           icon: <MessageSquare style={{ color: "#80B500" }} />,
-  //         },
-  //       ];
-  //     } else if (user.role === "farmer") {
-  //       routes = [
-  //         ...routes,
-  //         {
-  //           key: "home",
-  //           text: translate("home"),
-  //           to: "/farmer-home",
-  //           icon: <Home style={{ color: "#80B500" }} />,
-  //         },
-  //         {
-  //           key: "farms",
-  //           text: translate("add_farms"),
-  //           to: "/add-farms",
-  //           icon: <Plus style={{ color: "#80B500" }} />,
-  //         },
-  //         {
-  //           key: "chat",
-  //           text: translate("chat"),
-  //           to: "/chat",
-  //           icon: <MessageSquare style={{ color: "#80B500" }} />,
-  //         },
-  //         {
-  //           key: "Donations",
-  //           text: translate("received_donations"),
-  //           to: "/received-donations",
-  //           icon: <DollarSign style={{ color: "#80B500" }} />,
-  //         },
-  //       ];
-  //     } else if (user.role === "admin") {
-  //       routes = [
-  //         ...routes,
-  //         {
-  //           key: "home",
-  //           text: translate("home"),
-  //           to: "/admin-home",
-  //           icon: <Home style={{ color: "#80B500" }} />,
-  //         },
-  //         {
-  //           key: "users",
-  //           text: translate("get_users"),
-  //           to: "/get-users",
-  //           icon: <Users style={{ color: "#80B500" }} />,
-  //         },
-  //         {
-  //           key: "farms",
-  //           text: translate("all_farms"),
-  //           to: "/get-farms",
-  //           icon: <CloudSnow style={{ color: "#80B500" }} />,
-  //         },
-  //         {
-  //           key: "investors",
-  //           text: translate("all_investors"),
-  //           to: "/get-investors",
-  //           icon: <CloudSnow style={{ color: "#80B500" }} />,
-  //         },
-  //         {
-  //           key: "chat",
-  //           text: translate("chat"),
-  //           to: "/chat",
-  //           icon: <MessageSquare style={{ color: "#80B500" }} />,
-  //         },
-  //       ];
-  //     }
-  //   } else {
-  //     history.push("/");
-  //   }
+  const user = JSON.parse(localStorage.getItem("ag-user-data"));
+
+  console.log("Wewewww", user.role);
+
+  if (user) {
+    if (user.role === "SYSTEMADMIN") {
+      routes = [
+        ...routes,
+        {
+          key: "new church",
+          text: "New Church",
+          to: "/add-church",
+          icon: <Plus style={{ color: "#02B1D8" }} />,
+        },
+        {
+          key: "church leader",
+          text: "New Church Leader",
+          to: "/add-church-leader",
+          icon: <UserPlus style={{ color: "#02B1D8" }} />,
+        },
+        {
+          key: "church admin",
+          text: "New Church Admin",
+          to: "/add-church-admin",
+          icon: <UserPlus style={{ color: "#02B1D8" }} />,
+        },
+        {
+          key: "view users",
+          text: "View Users",
+          to: "/view-users",
+          icon: <Users style={{ color: "#02B1D8" }} />,
+        },
+      ];
+    } else if (user.role === "CHURCHLEADER") {
+      routes = [...routes];
+    } else if (user.role === "CHURCHADMIN") {
+      routes = [...routes];
+    } else if (user.role === "CONGREGANT") {
+      routes = [...routes];
+    }
+  } else {
+    history.push("/");
+  }
 
   const classes = useStyles();
 
@@ -251,4 +178,4 @@ const DrawerComponents = ({ history, ...props }) => {
   );
 };
 
-export default withRouter(DrawerComponents);
+export default DrawerComponents;
